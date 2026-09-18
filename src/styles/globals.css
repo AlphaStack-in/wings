@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Warm, playful, premium preschool palette (spec section 4) */
+  --color-cream: #fffaf0;
+  --color-ivory: #fdf6e9;
+  --color-sky: #5ec2e8;
+  --color-sky-light: #d9f2fc;
+  --color-leaf: #59b76c;
+  --color-leaf-light: #e2f5e6;
+  --color-sun: #f6b83b;
+  --color-sun-light: #fef1d6;
+  --color-coral: #f2764e;
+  --color-coral-light: #fde6dc;
+  --color-ink: #2c2a26;
+  --color-muted: #6b6459;
+
+  --font-heading: "Baloo 2", "Fredoka", sans-serif;
+  --font-body: "Nunito", "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+}
+
+/* Respect prefers-reduced-motion globally (spec section 5) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.focus-ring {
+  outline: none;
+}
+.focus-ring:focus-visible {
+  outline: 3px solid var(--color-sky);
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
