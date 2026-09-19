@@ -2,7 +2,7 @@
 
 import { useActionState } from "react";
 import type { Program } from "@/types/database";
-import type { ProgramActionState } from "./actions";
+import type { ProgramActionState } from "@/app/admin/(protected)/programs/actions";
 
 interface ProgramFormProps {
   action: (state: ProgramActionState, formData: FormData) => Promise<ProgramActionState>;
